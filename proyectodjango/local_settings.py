@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '80@vv+g^3g*-o+(z_dclv^5xlbehi)aw_4rk*9)f^z$#4pr#0n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['clienteservidorcs.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -52,15 +52,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'proyectodjango.urls'
-
-SITE_ID = 1
-
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES':('rest_framework.permissions.IsAuthenticated',),
-    'DEFAULT_AUTHENTICATION_CLASSES':('rest_framework.authentication.TokenAuthentication',),
-    'DEFAULT_PAGDATION_CLASSES':'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 100
-}
 
 TEMPLATES = [
     {
@@ -129,8 +120,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
-try: 
-    from proyectodjango.local_settings import *
-except importError:
-    pass
