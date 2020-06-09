@@ -130,7 +130,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-try: 
+try:
     from proyectodjango.local_settings import *
-except importError:
+except ImportError:
     pass
