@@ -38,5 +38,5 @@ router.register(r'users',UserViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^', include(router.urls)),
-    path('Swagger/', schema_view),
+    # path('Swagger/', schema_view),
 ]
